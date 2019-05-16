@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from datetime import date
 
 
 def index(request):
@@ -23,3 +24,7 @@ def index(request):
     return HttpResponse('It is GET request')
 
 
+def index2(request):
+    if request.method == 'POST':
+        return HttpResponse('date_1')
+    return HttpResponse('It is GET request')
