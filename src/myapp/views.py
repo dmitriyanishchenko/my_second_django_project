@@ -26,5 +26,11 @@ def index(request):
 
 def index2(request):
     if request.method == 'POST':
-        return HttpResponse('date_1')
+        d = request.POST.get('date')
+        # date_1 =  date.date(d)
+        #
+        # if date_1.day == 01 and date_1.month == 01:
+        #     return HttpResponse('С новым  годом')
+
+        return HttpResponse(d)
     return HttpResponse('It is GET request')
